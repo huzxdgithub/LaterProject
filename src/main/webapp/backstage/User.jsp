@@ -56,8 +56,7 @@
         <li role="presentation"  ><a href="#upload"  data-toggle="modal">导入用户表 </a> </li>
     </ul>
 <table id="userTable">
-
-<div id="userPager"></div>
+    <div id="userPager" style="height: 50px"></div>
 </table>
 </div>
 <div class="modal fade" id="upload" role="dialog">

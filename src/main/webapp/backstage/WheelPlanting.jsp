@@ -147,7 +147,7 @@
         </li>
     </ul>
     <table  id="whellplanting">
-        <span id="paper"></span>
+        <div id="paper" style="height: 50px"></div>
     </table>
     <div id="addWarningBox" class="alert alert-success" role="alert" style="display: none">添加成功</div>
     <div id="updateWarningBox" class="alert alert-success" role="alert" style="display: none">修改成功</div>

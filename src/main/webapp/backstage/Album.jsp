@@ -107,7 +107,7 @@
         var subGridPagerId= subGridId+"pager";
         $("#"+subGridId).html(
             " <table id="+subGridTableId+">" +
-            " <div id="+subGridPagerId+"></div>" +
+            " <div style=\"height: 50px\" id=" + subGridPagerId + " ></div>" +
             " </table>"
         );
         $("#"+subGridTableId).jqGrid({
@@ -237,7 +237,7 @@
         </li>
     </ul>
     <table id="AlbumTable">
-        <div id="AlbumPaper"></div>
+        <div id="AlbumPaper" style="height: 50px"></div>
     </table>
     <div id="addWarningBox" class="alert alert-success" role="alert" style="display: none">添加成功</div>
 </div>

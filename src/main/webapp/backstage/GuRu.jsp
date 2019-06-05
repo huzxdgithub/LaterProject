@@ -87,6 +87,6 @@ $(function () {
         <li role="presentation"  class="active"><a href="#">上师表 </a></li>
     </ul>
     <table id="GuruTable">
-        <div id="GuruPager"></div>
+        <div id="GuruPager" style="height: 50px"></div>
     </table>
 </div>

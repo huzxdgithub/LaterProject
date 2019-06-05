@@ -239,6 +239,6 @@
         <li role="presentation"  ><a href="javascript:void(0);" type="button"  id="addArticle">添加文章</a></li>
     </ul>
     <table id="ArticleTable">
-        <div id="ArticlePaper"></div>
+        <div id="ArticlePaper" style="height: 50px"></div>
     </table>
 </div>
