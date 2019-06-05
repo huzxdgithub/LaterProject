@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.mapper.ArticleMapper">
+    <!--分页展示文章-->
+    <select id="queryPaging" resultType="Article">
+        select id,title,createdate,content,guruid,status from article
+    </select>
+    <!--查询总条数-->
+    <select id="selectCount" resultType="int">
+        select count(*) from article
+    </select>
+    <!--查询上师-->
+    <select id="currentGuru" resultType="Guru">
+        select id ,guruname,picturepath,status,createdate from guru where id=#{id}
+    </select>
+    <!--添加文章-->
+    <insert id="addArticle">
+       insert  into article values (#{id},#{title},#{createDate},#{content},#{guRuId},#{status})
+    </insert>
+    <!--修改文章-->
+    <update id="updateArticle">
+        update article
+        <set>
+          <if test="title!=null">
+              title=#{title},
+          </if>
+            <if test="createDate!=null">
+                createDate=#{createDate},
+            </if>
+            <if test="content!=null">
+                content=#{content},
+            </if>
+            <if test="guRuId!=null">
+                guRuId=#{guRuId},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+    <!--删除文章-->
+    <delete id="removeArticle">
+        delete from article where id in
+        <foreach collection="array" open="(" item="id" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    <!--查询所有没有冻结的上师  添加文章时给下拉框选择哪位上师发布的文章-->
+    <select id="queryGuRuAll" resultType="Guru">
+        select id, guruname,picturePath,status ,createDate from guru where status ='1'
+    </select>
+    <!--查询单个文章-->
+    <select id="selectOneArticle" resultType="Article">
+        select id,title,createDate,content,guruid,status from article where id=#{id}
+    </select>
+</mapper>

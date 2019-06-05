@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.mapper.AlbumMapper">
+    <!--查询总条数-->
+<select id="selectCount" resultType="int">
+    select count(*) from album
+</select>
+    <!--查询所有专辑-->
+    <select id="queryPaging" resultType="Album">
+        select id,title,score,author,broadcast,count,brief,createdate,picturepath from album
+    </select>
+    <!--添加专辑-->
+
+    <insert id="addAlbum">
+        insert into album values (#{id},#{title},#{score},#{author},#{broadcast},#{count},#{brief},#{createDate},#{picturePath})
+    </insert>
+    <!--删除专辑-->
+    <delete id="removeAlbum">
+        delete from album where id in 
+        <foreach collection="array" open="(" item="id" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    <!--修改专辑-->
+    <update id="updateAlbum">
+        update album
+        <set>
+          <if test="title!=null">
+              title=#{title},
+          </if>
+            <if test="score!=null">
+                score=#{score},
+            </if>
+            <if test="author!=null">
+                author=#{author},
+            </if>
+            <if test="broadcast!=null">
+                broadcast=#{broadcast},
+            </if>
+            <if test="count!=null">
+                count=#{count},
+            </if>
+            <if test="brief!=null">
+                brief=#{brief},
+            </if>
+            <if test="createDate!=null">
+                createDate=#{createDate},
+            </if>
+            <if test="picturePath!=null">
+                picturePath=#{picturePath},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.mapper.AdminMapper">
+    <select id="login" resultType="Admin">
+        select id,adminname,adminpassword,salt from admin where adminname=#{adminName}
+    </select>
+    <resultMap id="selectAllRoleAndJurisdictionMap" type="com.baizhi.Dto.Role">
+        <result column="r_rolename" property="roleName"/>
+        <collection property="jurisdiction" ofType="java.lang.String">
+            <result column="j_jurisdictionname" property="jurisdiction"/>
+        </collection>
+    </resultMap>
+    <select id="selectAllRoleAndJurisdiction" resultMap="selectAllRoleAndJurisdictionMap">
+        select r.rolename as r_rolename,j.jurisdictionname as j_jurisdictionname
+        from admin a join userroleforeignkey ar on a.id=ar.adminid
+        join role r on r.id=ar.roleid
+        join rolejurisdictionforeignkey rj on r.id=rj.roleid
+        join jurisdiction j on j.id=rj.jurisdictionid
+        where a.id=#{id}
+    </select>
+</mapper>

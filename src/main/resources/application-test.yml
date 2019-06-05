@@ -1,0 +1,38 @@
+server:
+  port: 8000
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 19970406
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/laterproject
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: GMT+8
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 300MB
+  redis:
+    cluster:
+      nodes: 192.168.150.10:7001,192.168.150.10:7002,192.168.150.10:7003,192.168.150.10:7004,192.168.150.10:7005,192.168.150.10:7006
+  data:
+    elasticsearch:
+      cluster-nodes: 192.168.150.50:9300
+      cluster-name: my-application
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+mybatis:
+  type-aliases-package: com.baizhi.entity
+  mapper-locations: classpath:mapper/*Mapper.xml

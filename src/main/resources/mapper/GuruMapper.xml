@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.mapper.GuruMapper">
+    <!--分页展示上师-->
+    <select id="queryPaging" resultType="Guru">
+        select id,guruname,picturepath,status,createdate from guru limit #{page},#{rows}
+    </select>
+    <!--查询所有上师-->
+    <select id="selectCount" resultType="int">
+        select count(*) from guru
+    </select>
+    <!--添加上师-->
+    <insert id="addGuru">
+      insert into guru values (#{id},#{guRuName},#{picturePath},#{status},#{createDate})
+    </insert>
+    <!--修改上师-->
+    <update id="updateGuru">
+        update guru
+        <set>
+            <if test="guRuName!=null">
+                guruname=#{guRuName},
+            </if>
+            <if test="picturePath!=null">
+                picturePath=#{picturePath},
+            </if>
+            <if test="status!=null">
+                status=#{status},
+            </if>
+            <if test="guRuName!=null">
+                createDate=#{createDate}
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+    <!--删除上师-->
+    <delete id="removeGuru">
+        delete from guru where id in
+        <foreach collection="array" open="(" item="id" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>

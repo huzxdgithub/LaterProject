@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.mapper.WheelPlantingMapper">
+<!--分页轮播图-->
+    <select id="queryPaging" resultType="WheelPlanting">
+    select id,title,picturepath,status,createdate,description from wheelplanting limit  ${(page-1)*rows},#{rows}
+</select>
+    <!--查询轮播图数量-->
+    <select id="selectCount" resultType="int">
+        select count(*) from wheelplanting
+    </select>
+    <!--添加轮播图-->
+    <insert id="addWheelPlanting" >
+        insert into wheelplanting(id,title,status,createdate,description) values(#{id},#{title},#{status},#{createDate},#{description})
+    </insert>
+    <!--删除轮播图-->
+    <delete id="removeWheelPlanting" >
+        delete from wheelplanting where id in
+        <foreach collection="array" open="("  item="id" separator="," close=")">
+                 #{id}
+        </foreach>
+    </delete>
+    <!--修改轮播图-->
+    <update id="updateWheelPlanting" >
+      update wheelplanting
+        <set>
+            <if test="title!=null">
+                title=#{title},
+            </if>
+            <if test="picturePath!=null">
+                picturepath= #{picturePath},
+            </if>
+            <if test="status!=null">
+                status=#{status},
+            </if>
+            <if test="createDate!=null">
+                createDate=#{createDate},
+            </if>
+            <if test="description!=null">
+                description=#{description}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+
+</mapper>

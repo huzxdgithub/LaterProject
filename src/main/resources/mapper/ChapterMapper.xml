@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.mapper.ChapterMapper">
+    <select id="queryPaging" resultType="Chapter">
+      select id,title,size,duration,createDate,audioFrequency,albumId   from chapter where albumid=#{id}  limit #{page},#{rows}
+    </select>
+    <!--查询总条数-->
+    <select id="selectCount" resultType="int">
+        select count(*) from chapter where albumid=#{id}
+    </select>
+    <!--添加音频-->
+    <insert id="addAudioFrequency">
+        insert  into chapter values (#{id},#{title},#{size},#{duration},#{createDate},#{audioFrequency},#{albumId})
+    </insert>
+    <!--删除音频-->
+    <delete id="removeAudioFrequency">
+        delete from chapter where id in 
+        <foreach collection="array" open="(" item="id" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    <!--修改音频-->
+    <update id="updateAudioFrequency">
+        update chapter
+            <set>
+                <if test="title!=null">
+                    title=#{title},
+                </if>
+                <if test="size!=null">
+                    size=#{size},
+                </if>
+                <if test="duration!=null">
+                    duration=#{duration},
+                </if>
+                <if test="createDate!=null">
+                    createdate=#{createDate},
+                </if>
+                <if test="audioFrequency!=null">
+                    audiofrequency=#{audioFrequency},
+                </if>
+            </set>
+         where id=#{id}
+    </update>
+</mapper>
