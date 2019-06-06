@@ -4,6 +4,7 @@ import com.baizhi.aopcache.AddCache;
 import com.baizhi.aopcache.DelCache;
 import com.baizhi.entity.Article;
 import com.baizhi.entity.Guru;
+import com.baizhi.es.dao.ArticleDAO;
 import com.baizhi.mapper.ArticleMapper;
 import com.baizhi.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,17 +12,24 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.*;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {
     @Autowired
-    ArticleMapper articleMapper;
+    private ArticleMapper articleMapper;
+    //这是ES的查询Dao
+    @Autowired
+    private ArticleDAO articleDAO;
+
+    //查询所有文章 jqGrid展示
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
     @AddCache
-    //查询所有文章 jqGrid展示
     public Map<String, Object> queryPaging(Integer page, Integer rows) {
         Map<String, Object> map = new ConcurrentHashMap<String,Object>();
         //放入当前页
@@ -94,5 +102,9 @@ public class ArticleServiceImpl implements ArticleService {
          return   articleMapper.selectOneArticle(id);
     }
 
+    @Override
+    public List<Article> searchTitleAndContent(String term) {
+        return articleDAO.searchTileAndContent(term);
+    }
 
 }

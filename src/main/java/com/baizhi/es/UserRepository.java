@@ -1,7 +1,8 @@
 package com.baizhi.es;
-import com.baizhi.es.entity.User;
-import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
-public interface UserRepository extends ElasticsearchRepository<User,String> {
 
+import com.baizhi.entity.Article;
+import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+
+public interface UserRepository extends ElasticsearchRepository<Article, String> {
 
 }

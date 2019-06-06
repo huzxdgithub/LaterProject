@@ -4,7 +4,6 @@ import org.apache.ibatis.cache.Cache;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 import java.util.concurrent.locks.ReadWriteLock;
-
 public class MyBatisCache implements Cache {
     private String id;
 
@@ -53,7 +52,6 @@ public class MyBatisCache implements Cache {
         System.out.println(id.toString());
         stringRedisTemplate.delete(id.toString());
     }
-
     @Override
     public int getSize() {
         return 0;

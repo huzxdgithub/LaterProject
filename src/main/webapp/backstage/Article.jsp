@@ -32,82 +32,7 @@
 
 
 
-    $(function () {
-        KindEditor.create('#editor_id',{
-            uploadJson:"${pageContext.request.contextPath}/KindEditor/upload",
-            filePostName:"img",
-            allowFileManager:true,
-            resizeType:0,
-            afterBlur:function () {
-                //把当前textarea 加上他后台能接收到 input框name为content 的值 不然接收不到
-                this.sync()
-            },
-            fileManagerJson:"${pageContext.request.contextPath}/KindEditor/getAll"
-        });
-        $.ajax({
-            type:"post",
-            url:"${pageContext.request.contextPath}/Article/select",
-            dataType:"html",
-            success:function (data) {
-                $("#author").html(data);
-            }
-        })
 
-        /*文章列表*/
-        $("#ArticleTable").jqGrid({
-            colNames:["id","状态","标题","作者","内容","创建时间","上师ID","操作"],
-            page:1,
-            rowNum:5,
-            rowList:[1,5,10,15,30],
-            cellEdit:false,                         //设置表格可编辑
-            pager:"#ArticlePaper",                    //分页
-            autowidth:true,                      //自适应度表格宽度
-            editurl:"${pageContext.request.contextPath}/Article/edit",//增删改的URL
-            multiselect:true,//支持多选框
-            viewrecords:true,//显示数据总条数
-            url:"${pageContext.request.contextPath}/Article/queryPaging",//加载数据的url
-            datatype:"json",//url返回值类型
-            styleUI: 'Bootstrap',
-            colModel:[
-                {name:"id",align:"center",resizable:false},
-                {name:"status",align:"center",resizable:false,editable:true,edittype:"select",
-                    formatter:function (cellvalue,options,rowsObject) {
-                       if(cellvalue==1){
-                      return "展示";
-                       }
-                       return "不展示";
-                    },
-                    editoptions:{
-                    dataUrl:"${pageContext.request.contextPath}/WheelPlanting/select"
-                    }
-                },
-                {name:"title",align:"center",resizable:false,editable:true,edittype:"text"},
-                {name:"author",align:"center",resizable:false,edittype:"select",editable:true,
-                    editoptions:{dataUrl:"${pageContext.request.contextPath}/Article/select"}
-                },
-                {name:"content",hidden:true},
-                {name:"createDate",align:"center",resizable:false,edittype:"date"},
-                {name:"guRuId",hidden:true},
-
-                {name:"optios",
-                    formatter:function (cellvalue,options,rowsObject) {
-                        return"<a href='javascript:void(0)' class='btn btn-danger glyphicon glyphicon-remove' onclick='remove()'>删除</a>"+
-                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
-                       "<a href='javascript:void(0)'  class='btn btn-warning glyphicon glyphicon-pencil' onclick=\"update('"+rowsObject.id+"')\">查看详情</a>"
-                    }
-                }
-            ]
-        }).jqGrid("navGrid","#ArticlePaper",
-            //设置分页左边的图标增删改
-            {search:false,add:false,edit:false,deltext:"批量删除"},
-            //第一个框框修改
-            {
-                closeAfterEdit:true
-            },{
-                closeAfterAdd:true
-            }
-        )
-    })
     /*  $("#ArticleTable").jqGrid('editGridRow',"new",{
           height:400,
           reloadAfterSubmit:true,
@@ -181,6 +106,91 @@
                 $("#addArticlem").modal("hide");
                 $("#ArticleTable").trigger("reloadGrid");
             }
+
+    $(function () {
+        $("#search").click(function () {
+            var term = $("#searchquery").val();
+            $('#homepage').load('ElasticSearch.jsp?term=' + term);
+        })
+        KindEditor.create('#editor_id', {
+            uploadJson: "${pageContext.request.contextPath}/KindEditor/upload",
+            filePostName: "img",
+            allowFileManager: true,
+            resizeType: 0,
+            afterBlur: function () {
+                //把当前textarea 加上他后台能接收到 input框name为content 的值 不然接收不到
+                this.sync()
+            },
+            fileManagerJson: "${pageContext.request.contextPath}/KindEditor/getAll"
+        });
+        $.ajax({
+            type: "post",
+            url: "${pageContext.request.contextPath}/Article/select",
+            dataType: "html",
+            success: function (data) {
+                $("#author").html(data);
+            }
+        })
+
+        /*文章列表*/
+        $("#ArticleTable").jqGrid({
+            colNames: ["id", "状态", "标题", "作者", "内容", "创建时间", "上师ID", "操作"],
+            page: 1,
+            rowNum: 5,
+            rowList: [1, 5, 10, 15, 30],
+            cellEdit: false,                         //设置表格可编辑
+            pager: "#ArticlePaper",                    //分页
+            autowidth: true,                      //自适应度表格宽度
+            editurl: "${pageContext.request.contextPath}/Article/edit",//增删改的URL
+            multiselect: true,//支持多选框
+            viewrecords: true,//显示数据总条数
+            url: "${pageContext.request.contextPath}/Article/queryPaging",//加载数据的url
+            datatype: "json",//url返回值类型
+            styleUI: 'Bootstrap',
+            colModel: [
+                {name: "id", align: "center", resizable: false},
+                {
+                    name: "status", align: "center", resizable: false, editable: true, edittype: "select",
+                    formatter: function (cellvalue, options, rowsObject) {
+                        if (cellvalue == 1) {
+                            return "展示";
+                        }
+                        return "不展示";
+                    },
+                    editoptions: {
+                        dataUrl: "${pageContext.request.contextPath}/WheelPlanting/select"
+                    }
+                },
+                {name: "title", align: "center", resizable: false, editable: true, edittype: "text"},
+                {
+                    name: "author", align: "center", resizable: false, edittype: "select", editable: true,
+                    editoptions: {dataUrl: "${pageContext.request.contextPath}/Article/select"}
+                },
+                {name: "content", hidden: true},
+                {name: "createDate", align: "center", resizable: false, edittype: "date"},
+                {name: "guRuId", hidden: true},
+
+                {
+                    name: "optios",
+                    formatter: function (cellvalue, options, rowsObject) {
+                        return "<a href='javascript:void(0)' class='btn btn-danger glyphicon glyphicon-remove' onclick='remove()'>删除</a>" +
+                            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                            "<a href='javascript:void(0)'  class='btn btn-warning glyphicon glyphicon-pencil' onclick=\"update('" + rowsObject.id + "')\">查看详情</a>"
+                    }
+                }
+            ]
+        }).jqGrid("navGrid", "#ArticlePaper",
+            //设置分页左边的图标增删改
+            {search: false, add: false, edit: false, deltext: "批量删除"},
+            //第一个框框修改
+            {
+                closeAfterEdit: true
+            }, {
+                closeAfterAdd: true
+            }
+        )
+
+    })
 </script>
 <div class="modal fade  bs-example-modal-lg" id="addArticlem"  role="dialog">
     <div class="modal-dialog modal-lg" role="document">
@@ -228,7 +238,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<div class="col-md-10">
+<div>
 <div class="page-header">
     <h1>
         文章列表
@@ -237,7 +247,13 @@
     <ul class="nav nav-tabs">
         <li role="presentation"  class="active"><a href="#">文章表 </a></li>
         <li role="presentation"  ><a href="javascript:void(0);" type="button"  id="addArticle">添加文章</a></li>
+        <div class="input-group">
+            <input type="text" style="float: right;width: 30%" class="form-control" id="searchquery"
+                   placeholder="请输入标题和内容搜索">
+            <span class="input-group-addon"><a id="search" href="javascript:void(0);">搜索</a></span>
+        </div>
     </ul>
+</div>
     <table id="ArticleTable">
         <div id="ArticlePaper" style="height: 50px"></div>
     </table>

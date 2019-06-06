@@ -1,7 +1,6 @@
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\entity\Chapter.java
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\serviceimpl\UserServiceImpl.java
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\es\dao\ArticleDAO.java
-D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\contorller\EsArticle.java
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\mapper\WheelPlantingMapper.java
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\serviceimpl\GuruServiceImpl.java
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\Dto\Role.java
@@ -41,7 +40,6 @@ D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\entity\Article.java
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\shiro\MyRealm.java
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\LaterProjectEntrance.java
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\entity\Count.java
-D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\es\entity\User.java
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\cache\MyBatisCache.java
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\contorller\AlbumContorller.java
 D:\IADEGongZuoMuLu\LaterProject\src\main\java\com\baizhi\serviceimpl\AlbumServiceImpl.java

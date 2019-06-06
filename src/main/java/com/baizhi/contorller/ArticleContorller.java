@@ -1,9 +1,11 @@
 package com.baizhi.contorller;
+
 import com.baizhi.entity.Article;
 import com.baizhi.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -46,5 +48,10 @@ public class ArticleContorller {
     @RequestMapping("/selectOneArticle")
     public Article selectOneArticle(String id){
         return articleService.selectOneArticle(id);
+    }
+
+    @RequestMapping("/searchTitleAndContent")
+    public List<Article> searchTitleAndContent(String term) {
+        return articleService.searchTitleAndContent(term);
     }
 }

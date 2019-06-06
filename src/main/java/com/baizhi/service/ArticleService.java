@@ -1,7 +1,6 @@
 package com.baizhi.service;
 
 import com.baizhi.entity.Article;
-import com.baizhi.entity.Guru;
 
 import java.util.List;
 import java.util.Map;
@@ -19,4 +18,7 @@ public interface ArticleService {
     StringBuilder select();
     //查询单个文章
     Article selectOneArticle(String id);
+
+    //查询索引库 多字段查询
+    List<Article> searchTitleAndContent(String term);
 }

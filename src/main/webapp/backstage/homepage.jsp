@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.ico" />
     <meta name="viewport"  content="width=device-width, initial-scale=1">
      <link rel="stylesheet" href="${pageContext.request.contextPath}/boot/css/bootstrap.css">
-    <script  src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/boot/js/jquery-2.2.1.min.js"></script>
     <script src="${pageContext.request.contextPath}/boot/js/bootstrap.min.js"></script>
     <!--引入jqgrid-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/jqgrid/css/css/cupertino/jquery-ui-1.8.16.custom.css"/>
@@ -26,6 +26,16 @@
     <script src="${pageContext.request.contextPath}/echarts/china.js"></script>
     <script type="application/javascript">
         $(function () {
+            $("#user").click(function () {
+                var a = null;
+                <shiro:hasRole name="super">
+                $('#homepage').load('User.jsp')
+                a == "a";
+                </shiro:hasRole>
+                if (a == null) {
+                    alert("权限不够")
+                }
+            })
             $("#logout").click(function () {
                 $.ajax({
                     type:"GET",
@@ -64,7 +74,7 @@
             <%--手风琴--%>
             <div class="col-md-2">
                 <div class="panel-group" id="accordion" >
-                    <shiro:hasRole name="super">
+
                         <div class="panel panel-default">
                             <div class="panel-heading" >
                                 <h3 class="panel-title">
@@ -76,8 +86,7 @@
                             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" >
                                 <div class="panel-body">
                                     <ul class="nav nav-pills">
-                                        <li role="presentation" ><a href="javascript:$('#homepage').load('User.jsp')">用户列表</a></li>
-
+                                        <li role="presentation"><a id="user" href="javascript:void(0)">用户列表</a></li>
                                     </ul>
                                     <ul class="nav nav-pills">
                                         <li role="presentation" ><a href="javascript:$('#homepage').load('userEcharts.jsp')">用户图表</a></li>
@@ -91,7 +100,7 @@
                                 </div>
                             </div>
                         </div>
-                    </shiro:hasRole>
+
                     <div class="panel panel-default" >
                         <div class="panel-heading">
                             <h3 class="panel-title">

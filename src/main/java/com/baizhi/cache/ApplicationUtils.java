@@ -5,9 +5,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.Objects;
-
 @Component
 public class ApplicationUtils implements ApplicationContextAware {
     private static ApplicationContext applicationContext;
@@ -30,23 +27,7 @@ public class ApplicationUtils implements ApplicationContextAware {
         return bean;
     }
 
-    public static void main(String[] args) {
-        A a=new A();
-        a.met();
-
-    }
 
 
-}
 
-class A{
-    public void met(){
-        final int a=5;
-        A b=new A(){
-           public void me(){
-               System.out.println(a);
-           }
-        };
-
-    }
 }
