@@ -29,6 +29,7 @@ public class ArticleContorller {
             return null;
         }
         if(("edit").equals(oper)){
+            System.out.println(article.getContent() + "修改content");
           return   articleService.updateArticle(article);
         }
         return articleService.addArticle(article);

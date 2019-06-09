@@ -51,7 +51,6 @@
         })
         $("#addArticlem").modal("hide");
         $("#ArticleTable").trigger("reloadGrid");
-        
     }
     
     

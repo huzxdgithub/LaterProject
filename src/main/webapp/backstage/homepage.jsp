@@ -29,8 +29,8 @@
             $("#user").click(function () {
                 var a = null;
                 <shiro:hasRole name="super">
+                a = "a";
                 $('#homepage').load('User.jsp')
-                a == "a";
                 </shiro:hasRole>
                 if (a == null) {
                     alert("权限不够")
