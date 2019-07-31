@@ -17,8 +17,8 @@ public class AopCache {
     private StringRedisTemplate stringRedisTemplate;
 
     @Around("@annotation(com.baizhi.aopcache.AddCache)")
-    public Object around(ProceedingJoinPoint proceedingJoinPoint)  {
-       StringBuilder sb=new StringBuilder();
+    public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+     /*  StringBuilder sb=new StringBuilder();
         //className 就是service的路径把
         String className = proceedingJoinPoint.getTarget().getClass().getName();
         //获取名称方法名称 method
@@ -42,8 +42,8 @@ public class AopCache {
             }
             String serialize = SerializeUtils.serialize(result);
             stringRedisTemplate.opsForHash().put(className, sb.toString(), serialize);
-        }
-        return result;
+        }*/
+        return proceedingJoinPoint.proceed();
     }
     @After("@annotation(com.baizhi.aopcache.DelCache)")
     public void DelCache(JoinPoint joinPoint){

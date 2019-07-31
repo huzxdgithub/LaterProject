@@ -19,7 +19,7 @@ public class ShiroFilter {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
             //添加匿名资源
             Map<String,String> map = new HashMap<>();
-            map.put("/backstage/**","authc");
+            map.put("/backstage/**","anon");
             map.put("/Admin/login","anon");
             map.put("/login/**","anon");
         //放入匿名资源

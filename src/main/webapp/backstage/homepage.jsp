@@ -30,11 +30,12 @@
                 var a = null;
                 <shiro:hasRole name="super">
                 a = "a";
-                $('#homepage').load('User.jsp')
+
                 </shiro:hasRole>
-                if (a == null) {
-                    alert("权限不够")
-                }
+                $('#homepage').load('User.jsp')
+               // if (a == null) {
+                //    alert("权限不够")
+                //}
             })
             $("#logout").click(function () {
                 $.ajax({
