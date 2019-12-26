@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sx-config>
+	<!-- 文件上传的配置信息 -->
+	<upload-config type="com.sx.conf.UploadConfig">
+		<!-- 文件上传的最大限制(单位为B，1kB = 1024B) -->
+		<file-maxsize>102400</file-maxsize>
+		<!-- 读取到内存中最大限制(k) -->
+		<load-maxsize>4096</load-maxsize>
+		<!-- 文件如果超出内存读取的最大限制，要产生临时文件，临时文件的存放目录 -->
+		<temp-path>sysfiles</temp-path>
+		<!-- 文件上传到服务器端目录，此配置为兼容以前版本配置 -->
+		<file-path>sysfiles</file-path>
+		<!-- 文件上传到服务器端目录，绝对路径 -->
+		<file-absolute-path>I:/sysfiles</file-absolute-path>
+	</upload-config>
+	<upload-modular-config
+		type="com.sx.conf.UploadModularConfig">
+		<item>
+			<!-- 模块名称 -->
+			<modename>testmode</modename>
+			<!-- 允许上传文件类型 -->
+			<allowfiletype>zip,mp3,jpg,png;gif</allowfiletype>
+			<!-- 不允许上传文件类型 -->
+			<exludefiletype>exe</exludefiletype>
+			<!-- 最大文件大小 -->
+			<maxfilesize>10000000</maxfilesize>
+		</item>
+		<!-- 引才工作站图片 -->
+		<item>
+			<modename>ycgzztp</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+		<!-- 培训服务课程宣传宣传图 -->
+		<item>
+			<modename>pxfwkcxct</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+		<!-- 培训服务讲师头像 -->
+		<item>
+			<modename>pxfwjstx</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+		<!-- 培训服务课件 30Mb -->
+		<item>
+			<modename>pxfwkj</modename>
+			<allowfiletype>xls,xlsx,docx,doc,pdf,txt,rar,zip,ppt,pptx
+			</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>31457280</maxfilesize>
+		</item>
+		<!-- 人才活动宣传图 -->
+		<item>
+			<modename>rchdxct</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+		<!-- 专家扶贫工作照 -->
+		<item>
+			<modename>zjfpgzz</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+		<!-- 专家扶贫二维码 -->
+		<item>
+			<modename>zjfpewm</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+		<!-- 筑人才上传起 -->
+		<!-- 职业培训上传图片 -->
+		<item>
+			<modename>zypx</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+		<!--档案证明身份证上传 -->
+		<item>
+			<modename>dazmsfz</modename>
+			<allowfiletype>jpg,jpeg</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 档案证明身份证上传 -->
+		<!--档案证明户口上传 -->
+		<item>
+			<modename>dazmhk</modename>
+			<allowfiletype>jpg,jpeg</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 档案证明户口上传 -->
+		<!--档案证明工作证明上传 -->
+		<item>
+			<modename>dazmgzzm</modename>
+			<allowfiletype>jpg,jpeg</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 档案证明工作证明上传 -->
+		<!--档案证明解除合同证明上传 -->
+		<item>
+			<modename>dazmjcht</modename>
+			<allowfiletype>jpg,jpeg</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 档案证明解除合同证明上传 -->
+		<!--档案证明电子签名上传 -->
+		<item>
+			<modename>dazmdzqm</modename>
+			<allowfiletype>jpg,jpeg</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 档案证明电子签名上传 -->
+		<!-- 资讯封面图片上传 -->
+		<item>
+			<modename>zxfmtp</modename>
+			<!-- 允许上传文件类型 -->
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<!-- 不允许上传文件类型 -->
+			<exludefiletype></exludefiletype>
+			<!-- 最大文件大小 -->
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 党组织证明附件 -->
+		<item>
+			<modename>dzzzmfj</modename>
+			<allowfiletype>pdf,doc,docx</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+		<!-- 党组织证明shenfezheng -->
+		<item>
+			<modename>dzzzmsfz</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+		<!-- 党组织活动web -->
+		<item>
+			<modename>dzzhd_web</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>51200</maxfilesize>
+		</item>
+		<!-- 党组织活动app -->
+		<item>
+			<modename>dzzhd_app</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>51200</maxfilesize>
+		</item>
+		<!-- 对账单上传 -->
+		<item>
+			<modename>dzddr</modename>
+			<allowfiletype>xlsx</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 对账单上传 -->
+		<!-- 退款账单上传 -->
+		<item>
+			<modename>tkddr</modename>
+			<allowfiletype>xlsx</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 退款账单上传 -->
+		<!-- 邮件附件上传 -->
+		<item>
+			<modename>yjfj</modename>
+			<allowfiletype>pdf,doc,docx</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 邮件附件上传 -->
+		<!-- 二维码上传 -->
+		<item>
+			<modename>kjzmcodeMode</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 二维码上传 -->
+		<!-- 筑人才上传止 -->
+		<!-- 个人报考上传 -->
+		<item>
+			<modename>grbk</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>51200</maxfilesize>
+		</item>
+		<!-- 个人报考上传 -->
+		<!-- 个人中心-考试管理 -->
+		<item>
+			<!-- 报考资料头像 -->
+			<modename>bkzltxsc</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>51200</maxfilesize>
+		</item>
+		<!-- 个人中心-考试管理 -->
+		<item>
+			<!-- 考试管理附加信息身份证 -->
+			<modename>ksfjxxsfz</modename>
+			<!-- 允许上传文件类型 -->
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<!-- 不允许上传文件类型 -->
+			<exludefiletype></exludefiletype>
+			<!-- 最大文件大小 -->
+			<maxfilesize>200000</maxfilesize>
+		</item>
+		<item>
+			<!-- 考试管理考生附加信息学位证 -->
+			<modename>ksfjxxxwz</modename>
+			<!-- 允许上传文件类型 -->
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<!-- 不允许上传文件类型 -->
+			<exludefiletype></exludefiletype>
+			<!-- 最大文件大小 -->
+			<maxfilesize>200000</maxfilesize>
+		</item>
+		<item>
+			<!-- 考试管理考生附加信息毕业证就业推荐表 -->
+			<modename>ksbyzjytjb</modename>
+			<!-- 允许上传文件类型 -->
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<!-- 不允许上传文件类型 -->
+			<exludefiletype></exludefiletype>
+			<!-- 最大文件大小 -->
+			<maxfilesize>200000</maxfilesize>
+		</item>
+		<item>
+			<!-- 考试管理考生照片 -->
+			<modename>kszp</modename>
+			<!-- 允许上传文件类型 -->
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<!-- 不允许上传文件类型 -->
+			<exludefiletype></exludefiletype>
+			<!-- 最大文件大小 -->
+			<maxfilesize>50000</maxfilesize>
+		</item>
+		<item>
+			<!-- 报考考试信息附件上传 -->
+			<modename>bkfj</modename>
+			<allowfiletype>xls,xlsx,docx,doc,pdf,txt</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+		<item>
+			<!-- 报考考试宣传图 -->
+			<modename>bkxct</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+
+		<!-- 单位认证 -->
+		<item>
+			<!-- 工商营业执照 -->
+			<modename>gsyyzz</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>10240000</maxfilesize>
+		</item>
+		<item>
+			<!-- 组织机构代码 -->
+			<modename>zzjgdm</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>102400000</maxfilesize>
+		</item>
+		<item>
+			<!-- 经办人身份证 -->
+			<modename>jbrsfz</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>10240000</maxfilesize>
+		</item>
+		<item>
+			<!-- 单位logo -->
+			<modename>dwlogo</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>2000000</maxfilesize>
+		</item>
+		<item>
+			<!-- 联系人头像 -->
+			<modename>lxrtouxiang</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>2000000</maxfilesize>
+		</item>
+		<!-- 单位认证 -->
+		<!-- 个人简历 -->
+		<item>
+			<!-- 我的简历头像上传 -->
+			<modename>jltouxiang</modename>
+			<allowfiletype>jpg,png;gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>50000000</maxfilesize>
+		</item>
+		<item>
+			<!-- 下载简历 -->
+			<modename>wdjlMode2</modename>
+			<allowfiletype>doc</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>1000000</maxfilesize>
+		</item>
+		<item>
+			<!-- 我的简历二维码 -->
+			<modename>wdjlewm</modename>
+			<allowfiletype>jpg</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>1000000</maxfilesize>
+		</item>
+		<!-- 个人简历 -->
+		<!-- 广告管理 -->
+		<item>
+			<!-- 广告管理 -->
+			<modename>guanggao150</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>2000000</maxfilesize>
+		</item>
+		<item>
+			<!-- 广告管理 -->
+			<modename>guanggao50</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>40960</maxfilesize>
+		</item>
+		<!-- 广告管理 -->
+		<!-- 人才派遣我的客户 -->
+		<item>
+			<!-- 人才派遣我的客户 -->
+			<modename>rcpq</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>5000000</maxfilesize>
+		</item>
+		<!-- 人才派遣我的客户 -->
+		<!-- 新闻管理附件上传 -->
+		<item>
+			<modename>xinwenfj</modename>
+			<allowfiletype>xls,xlsx,docx,doc,pdf,txt,rar,zip</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>5000000</maxfilesize>
+		</item>
+		<!-- 新闻管理附件上传 -->
+		<!-- 现场招聘承诺书上传 -->
+		<item>
+			<modename>xczpcns</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>10240000</maxfilesize>
+		</item>
+		<!-- 现场招聘承诺书上传 -->
+		<!-- 房屋租赁合同上传 -->
+		<item>
+			<modename>fwzpht</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>10240000</maxfilesize>
+		</item>
+		<!-- 房屋租赁合同上传 -->
+		<!-- 对账单上传 -->
+		<item>
+			<modename>dzddr</modename>
+			<allowfiletype>xlsx</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 对账单上传 -->
+		<!-- 退款账单上传 -->
+		<item>
+			<modename>tkddr</modename>
+			<allowfiletype>xlsx</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>500000</maxfilesize>
+		</item>
+		<!-- 退款账单上传 -->
+		<!-- 人才活动宣传图 -->
+		<item>
+			<modename>rchdxct</modename>
+			<allowfiletype>jpg,png,gif</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>512000</maxfilesize>
+		</item>
+		<!-- 活动压缩包 -->
+		<item>
+			<modename>hdysb</modename>
+			<allowfiletype>rar,zip</allowfiletype>
+			<exludefiletype></exludefiletype>
+			<maxfilesize>1024000</maxfilesize>
+		</item>
+		<!-- 活动压缩包 -->
+	</upload-modular-config>
+	<!-- dba的配置信息 old -->
+	<dba-config type="com.sx.conf.DbaConfig">
+		<dbs>gyrlzyw</dbs>
+		<cfgfile>gyrlzyw.xml</cfgfile>
+		<driver>oracle.jdbc.driver.OracleDriver</driver>
+	</dba-config>
+	<!-- 多数据源配置信息 -->
+	<multi-db-config type="com.sx.conf.MultiDbConfig">
+		<item>
+			<dbs>gyrlzywsqlserver</dbs>
+			<cfgfile>gyrlzyw.xml</cfgfile>
+			<driver>com.microsoft.jdbc.sqlserver.SQLServerDriver</driver>
+		</item>
+		<item>
+			<dbs>gyrlzyw</dbs>
+			<cfgfile>gyrlzyw.xml</cfgfile>
+			<driver>oracle.jdbc.driver.OracleDriver</driver>
+			<default>true</default>
+		</item>
+		<item>
+			<dbs>BINFO</dbs>
+			<cfgfile>gyrlzyw.xml</cfgfile>
+			<driver>oracle.jdbc.driver.OracleDriver</driver>
+		</item>
+		<item>
+			<dbs>MYSQL</dbs>
+			<cfgfile>gyrlzyw.xml</cfgfile>
+			<driver>com.mysql.jdbc.Driver</driver>
+		</item>
+	</multi-db-config>
+	<!-- 数据库操作事件配置信息 -->
+	<db-event type="com.sx.conf.DbEventConfig">
+		<enable>true</enable>
+		<isasync>true</isasync>
+		<!-- database name configured in multi-db-config -->
+		<savedbs>gyrlzyw</savedbs>
+		<!-- package info split with ; or , -->
+		<packages>com.sx.demo</packages>
+		<defaultListener>
+			<className>com.sx.gyrlzyw.dbevent.SqlSaveListener</className>
+		</defaultListener>
+	</db-event>
+
+	<!-- rbac的配置信息 rbacforoauth -->
+	<rbac-config type="com.sx.conf.RbacConfig">
+		<rbacurl>${rbacurl}</rbacurl>
+		<rbactype>${rbactype}</rbactype><!-- rbac,rbacforoauth,rbacforlocal,pfpmi -->
+	</rbac-config>
+
+	<rbac-oauth-config
+		type="com.sx.support.rbac.conf.OAuthClientConfig">
+		<client_id>${client_id}</client_id>
+		<client_secret>${client_secret}</client_secret>
+	</rbac-oauth-config>
+	<!-- Rbac配置结束的 -->
+
+	<!-- 日志的配置信息 -->
+	<log-config type="com.sx.conf.LogConfig">
+		<logxcfg>logxcfg.xml</logxcfg>
+		<app>gyrlzyw</app>
+		<debug>false</debug>
+	</log-config>
+
+	<!-- app的配置信息 分页 -->
+	<app-config type="com.sx.conf.AppConfig">
+		<appcontext>/</appcontext>
+		<pagecountbyh>12</pagecountbyh>
+		<pagecountbyv>5</pagecountbyv>
+	</app-config>
+	<!-- redis缓存配置项 -->
+	<redis-init-config type="com.sx.conf.RedisInitConfig">
+		<!-- 单个redis实例配置一个ip端口map，redis集群时配置多个 -->
+		<item>
+			<host>10.100.100.3</host>
+			<port>7000</port>
+		</item>
+		<item>
+			<host>10.100.100.3</host>
+			<port>7001</port>
+		</item>
+		<item>
+			<host>10.100.100.3</host>
+			<port>7002</port>
+		</item>
+	</redis-init-config>
+	<!-- redis缓存集群和连接池配置项 -->
+	<redis-additional-config
+		type="com.sx.conf.RedisInitConfig">
+		<!-- 是否集群,默认为false -->
+		<cluster>true</cluster>
+		<!-- 开启读写分离，default false，非集群主从模式下有效 -->
+		<rwseparation>false</rwseparation>
+		<!-- 非集群模式下redis密码 -->
+		<password></password>
+		<!-- 最大连接 -->
+		<maxTotal>9</maxTotal>
+		<!-- 最大空闲 -->
+		<maxIdle>9</maxIdle>
+		<!-- 最小空闲 -->
+		<minIdle>7</minIdle>
+	</redis-additional-config>
+	<!-- 首页专题新闻类型固定中类名称及id -->
+	.
+	<syztxwlx-app-config
+		type="com.sx.gyrlzyw.wzqt.conf.SyConfig">
+		<!-- 人事代理党委的党员信箱 -->
+		<rsdldwDyhd>04060000</rsdldwDyhd>
+		<!-- 人事代理党委的党员信箱 -->
+		<rsdldwDyxx>04030400</rsdldwDyxx>
+		<!-- 人事代理党委的信息中心 -->
+		<rsdldwXxzx>04020000</rsdldwXxzx>
+		<!-- 人事代理党委的党建工作平台 -->
+		<rsdldwDjgzpt>04030000</rsdldwDjgzpt>
+		<!-- 大学生就业的就业见习 -->
+		<dxsjyJyjx>08030000</dxsjyJyjx>
+		<!-- 大学生就业的通知公告 -->
+		<dxsjyTzgg>08040000</dxsjyTzgg>
+		<!-- 大学生就业的见习报名名单 -->
+		<dxsjyJxbmmd>08030100</dxsjyJxbmmd>
+		<!-- 大学生就业的见习基地（单位）名单 -->
+		<dxsjyJxjd>08030300</dxsjyJxjd>
+		<!-- 档案管理 最新动态 -->
+		<daglZxdt>02040000</daglZxdt>
+		<!-- 档案管理 通知公告 -->
+		<daglTzgg>02020000</daglTzgg>
+		<!-- 中介管理的办理需知 -->
+		<zjglBlxz>03020000</zjglBlxz>
+		<!-- 中介管理的流程展现 -->
+		<zjglLczx>03030000</zjglLczx>
+		<!-- 中介管理的通知公告 -->
+		<zjglTzgg>03040000</zjglTzgg>
+		<!-- 职称评审的通知公告 -->
+		<zcpsTzgg>05020000</zcpsTzgg>
+		<!--培训测评的测评简介 -->
+		<pxcpCpjj>06020000</pxcpCpjj>
+		<!--培训测评的通知公告 -->
+		<pxcpTzgg>06030000</pxcpTzgg>
+		<!--学历认证的工作流程 -->
+		<xlrzGzlc>07030000</xlrzGzlc>
+		<!--学历认证的通知公告 -->
+		<xlrzTzgg>07040000</xlrzTzgg>
+		<!-- 学历认证首页的小类个数 -->
+		<xlrzXlgs>LIMIT 2</xlrzXlgs>
+		<!-- 人才派遣的企业服务 -->
+		<rcpqQyfw>01030000</rcpqQyfw>
+		<!-- 人才派遣的员工服务 -->
+		<rcpqYgfw>01040000</rcpqYgfw>
+		<!-- 人才派遣的通知公告 -->
+		<rcpqTzgg>01050000</rcpqTzgg>
+		<!-- 人才派遣的政策咨询 -->
+		<rcpqZczx>01060000</rcpqZczx>
+		<!-- 人才派遣的文件下载 -->
+		<rcpqWjxz>01070000</rcpqWjxz>
+		<!-- 人才派遣的公会活动 -->
+		<rcpqGhhd>01040100</rcpqGhhd>
+		<!-- 人才派遣首页的小类个数 -->
+		<rcpqXlgs>LIMIT 3</rcpqXlgs>
+		<!-- 首页的单位服务新闻类型id -->
+		<dwfwLxid>09000000</dwfwLxid>
+		<!-- 单位服务现场招聘id -->
+		<dwfwXczp>09010000</dwfwXczp>
+		<!-- 单位服务网上招聘id -->
+		<dwfwWszp>09020000</dwfwWszp>
+		<!-- 单位服务委托招聘id -->
+		<dwfwWtzp>09030000</dwfwWtzp>
+		<!-- 首页的消息咨询新闻类型id -->
+		<xxzxLxid>10000000</xxzxLxid>
+		<!-- 消息咨询的最新资讯 -->
+		<xxzxZxzx>10010000</xxzxZxzx>
+		<!-- 消息咨询的政策法规 -->
+		<xxzxZcfg>10020000</xxzxZcfg>
+		<!-- 消息咨询的最新资讯 -->
+		<xxzxZkxx>10030000</xxzxZkxx>
+		<!-- 消息咨询的就业见习 -->
+		<xxzxJyjx>10040000</xxzxJyjx>
+		<!-- 消息咨询的人才政策 -->
+		<xxzxRczc>10050000</xxzxRczc>
+		<!-- 消息咨询的职称评审 -->
+		<xxzxZcps>10060000</xxzxZcps>
+		<!-- 消息咨询的人才资讯 -->
+		<xxzxRczx>10070000</xxzxRczx>
+		<!-- 首页的关于我们新闻类型id -->
+		<gywmLxid>11000000</gywmLxid>
+		<!-- 人才派遣首页 -->
+		<rcpqSy>01010000</rcpqSy>
+		<!-- 流动人员档案首页 -->
+		<daglSy>02010000</daglSy>
+		<!-- 中介管理首页 -->
+		<zjglSy>03010000</zjglSy>
+		<!-- 人事代理党委首页 -->
+		<rsdldwSy>04010000</rsdldwSy>
+		<!-- 职称评审首页 -->
+		<zcpsSy>05010000</zcpsSy>
+		<!-- 培训测评首页 -->
+		<pxcpSy>06010000</pxcpSy>
+		<!-- 学历认证首页 -->
+		<xlrzSy>07010000</xlrzSy>
+		<!-- 大学生就业首页 -->
+		<dxsjySy>08010000</dxsjySy>
+		<!-- 人才派遣联系我们 -->
+		<rcpqLxwm>01080000</rcpqLxwm>
+		<!-- 流动人员档案联系我们 -->
+		<daglLxwm>02080000</daglLxwm>
+		<!-- 中介管理联系我们 -->
+		<zjglLxwm>03060000</zjglLxwm>
+		<!-- 学历认证联系我们 -->
+		<xlrzLxwm>07050000</xlrzLxwm>
+		<!-- 大学生将就业联系我们 -->
+		<dxsjyLxwm>08060000</dxsjyLxwm>
+		<!-- 人事代理党委思想汇报 -->
+		<rsdldwSxhb>04050000</rsdldwSxhb>
+		<!-- 人才派遣的公司简介 -->
+		<rcpqGsjj>01020000</rcpqGsjj>
+		<!-- 中介管理的办理须知 -->
+		<zjglBlxz>03020000</zjglBlxz>
+		<!-- 中介管理的流程展现 -->
+		<zjglLczx>03030000</zjglLczx>
+		<!-- 培训测评的测评简介 -->
+		<pxcpCpjj>06020000</pxcpCpjj>
+		<!-- 学历认证的简介 -->
+		<xlrzJj>07020000</xlrzJj>
+		<!-- 学列认证工作流程办理须知 -->
+		<xlrzBlxz>07030100</xlrzBlxz>
+		<!-- 学历认证的工作流程流程展现 -->
+		<xlrzLczx>07030200</xlrzLczx>
+	</syztxwlx-app-config>
+
+	<sx-app-Config type="com.sx.gyrlzyw.conf.SxAppConfig">
+		<!-- 系统参数表(gyrlzyw_qzzp_xtcs) start -->
+		<!-- 置顶重点企业数 -->
+		<zdzdqys>zdzdqys</zdzdqys>
+		<!--人工排序重点企业数 -->
+		<rgpxzdqys>rgpxzdqys</rgpxzdqys>
+		<!-- 活跃排序重点企业数 -->
+		<hypxzdqy>hypxzdqy</hypxzdqy>
+		<!-- 富文本字数最大值 -->
+		<fwbzszdz>40000</fwbzszdz>
+		<!-- 招聘会列表条数 -->
+		<zphlbts>zphlbts</zphlbts>
+		<!-- 每日购买简历上限值 -->
+		<mrgmjlsxz>mrgmjlsxz</mrgmjlsxz>
+		<!-- 单位信誉值 -->
+		<dwxyz>dwxyz</dwxyz>
+		<!-- 筑人才配置起 -->
+		<!-- 考试类型1列表显示时间天 -->
+		<kslx1lbxssj>180</kslx1lbxssj>
+		<!-- 考试类型2列表显示时间天 -->
+		<kslx2lbxssj>180</kslx2lbxssj>
+		<!-- 调档函印章 -->
+		<ddhyzlj>ddhyzlj</ddhyzlj>
+		<!-- 调档函二维码 -->
+		<ddhewm>ddhewm</ddhewm>
+		<!-- 开具证明户籍印章 -->
+		<kjzmhjyz>kjzmhjyz</kjzmhjyz>
+		<!-- 人事代理人员委员会 -->
+		<rsdlrywyh>rsdlrywyh</rsdlrywyh>
+		<!-- 筑人才配置起 -->
+		<!-- 非现场招聘展位锁定时间 -->
+		<fxczpzwsdsj>fxczpzwsdsj</fxczpzwsdsj>
+		<!-- 申请职位数量 -->
+		<sqzwsl>sqzwsl</sqzwsl>
+		<!-- 收藏职位有效期 -->
+		<sczwyxq>sczwyxq</sczwyxq>
+		<!-- 现场招聘展位锁定时间 -->
+		<xczpzwsdsj>xczpzwsdsj</xczpzwsdsj>
+		<!-- 人才信息 _家庭成员数量 -->
+		<jtcysl>jtcysl</jtcysl>
+		<!-- 人才信息 _申报服务数量 -->
+		<sqfwsl>sqfwsl</sqfwsl>
+		<!-- 人才信息 _医保兑现数量 -->
+		<ybdxsl>ybdxsl</ybdxsl>
+		<!-- 人才信息 _生活补贴数量 -->
+		<shbtsl>shbtsl</shbtsl>
+		<!-- 人才信息 _住房补贴数量 -->
+		<zfbtsl>zfbtsl</zfbtsl>
+		<!-- 人才信息 _专业技术职务数量 -->
+		<zyjszwsl>zyjszwsl</zyjszwsl>
+		<!-- 人才信息 _职业资格等级证书数量 -->
+		<zyzgdjzssl>zyzgdjzssl</zyzgdjzssl>
+		<!-- 简历数量 -->
+		<jlsl>jlsl</jlsl>
+		<!-- 教育背景数量 -->
+		<jybjsl>jybjsl</jybjsl>
+		<!-- 工作经验数量 -->
+		<gzjysl>gzjysl</gzjysl>
+		<!-- 项目经验数量 -->
+		<xmjysl>xmjysl</xmjysl>
+		<!-- 个人证书数量 -->
+		<grzssl>grzssl</grzssl>
+		<!-- 语言能力数量 -->
+		<yynlsl>yynlsl</yynlsl>
+		<!-- 投递记录有效期 -->
+		<tdjlyxq>tdjlyxq</tdjlyxq>
+		<!-- 现场投递记录有效期 -->
+		<xctdjlyxq>xctdjlyxq</xctdjlyxq>
+		<!-- 简历被查看有效期 -->
+		<jlbckyxq>jlbckyxq</jlbckyxq>
+		<!-- 简历被收藏有效期 -->
+		<jlbscyxq>jlbscyxq</jlbscyxq>
+		<!-- 屏蔽单位数量 -->
+		<pbdwsl>pbdwsl</pbdwsl>
+		<!-- 购买简历有效期 -->
+		<gmjlyxq>gmjlyxq</gmjlyxq>
+		<!-- 简历点数 -->
+		<jlds>jlds</jlds>
+		<!-- 按时提交招聘会职位 -->
+		<astjzpzw>astjzpzw</astjzpzw>
+		<!-- 购买发送短信内容 -->
+		<gmfsdxnr>gmfsdxnr</gmfsdxnr>
+		<!-- 购买名企图标 -->
+		<gmmqtb>gmmqtb</gmmqtb>
+		<!-- 购买banner -->
+		<gmbanner>gmbanner</gmbanner>
+		<!-- 签到第1日 -->
+		<lx1t>lx1t</lx1t>
+		<!-- 连续签到第2日 -->
+		<lx1t>lx2t</lx1t>
+		<!-- 连续签到第3日 -->
+		<lx1t>lx3t</lx1t>
+		<!-- 连续签到第4日 -->
+		<lx1t>lx4t</lx1t>
+		<!-- 连续签到第5日 -->
+		<lx1t>lx5t</lx1t>
+		<!-- 连续签到第6日 -->
+		<lx1t>lx6t</lx1t>
+		<!-- 连续签到第7日 -->
+		<lx1t>lx7t</lx1t>
+		<!-- 短信条数 -->
+		<dxts>dxts</dxts>
+		<!-- 委托招聘展位锁定时间 -->
+		<wtzpzwsdsj>wtzpzwsdsj</wtzpzwsdsj>
+		<!-- 审批拒绝有效期 -->
+		<spjjyxq>spjjyxq</spjjyxq>
+		<!-- 未审批有效期 -->
+		<wspyxq>wspyxq</wspyxq>
+		<!-- 现场招聘职位有效期 -->
+		<xczpzwyxq>xczpzwyxq</xczpzwyxq>
+		<!-- 手机验证码有效期 -->
+		<sjyzmyxq>sjyzmyxq</sjyzmyxq>
+		<!-- 邮箱激活码有效期 -->
+		<yxjhmyxq>yxjhmyxq</yxjhmyxq>
+		<!-- 短信单价 -->
+		<dxjg>dxjg</dxjg>
+		<!-- 招聘点数单价 -->
+		<zpdsdj>zpdsdj</zpdsdj>
+		<!-- 简历点数单价 -->
+		<jldsdj>jldsdj</jldsdj>
+		<!-- 是否开启3楼展位 -->
+		<sfkq3lzw>sfkq3lzw</sfkq3lzw>
+		<!-- 是否开启2楼展位 -->
+		<sfkq2lzw>sfkq2lzw</sfkq2lzw>
+		<!-- 相似职位有效期 -->
+		<xszwyxq>xszwyxq</xszwyxq>
+		<!-- 名企图标单价 -->
+		<rdtbdj>rdtbdj</rdtbdj>
+		<!-- BANNER单价 -->
+		<bannerdj>bannerdj</bannerdj>
+		<!-- 委托招聘单价 -->
+		<wtzpdj>wtzpdj</wtzpdj>
+		<!-- 网上预订现场展位截止时间 -->
+		<wsydxczwjzsj>wsydxczwjzsj</wsydxczwjzsj>
+		<!-- 网上支付快递费 -->
+		<wszfkdf>wszfkdf</wszfkdf>
+		<!-- 招聘会2楼 -->
+		<zphlc2l>2</zphlc2l>
+		<!-- 招聘会3楼 -->
+		<zphlc2l>3</zphlc2l>
+		<!-- 每页条数 -->
+		<pageSize>10</pageSize>
+		<!-- 收藏简历有效期 -->
+		<scjlyxq>scjlyxq</scjlyxq>
+		<!-- 支付宝接口返回code -->
+		<succode>10000</succode>
+		<bhsxcsz>000001</bhsxcsz>
+		<!-- 图片服务器ip地址 -->
+		<pictureServer>http://192.168.130.84:8086</pictureServer>
+		<!--档案，党员证明下载图片ip地址 -->
+		<zmpictureServer>http://192.168.130.84:8086</zmpictureServer>
+		<!--app服务 档案二维码图片获 ip地址 -->
+		<appewmpictureServer>http://192.168.43.121:8080</appewmpictureServer>
+		<!-- 贵阳人才首页网址 二级域名用 -->
+		<gyrczywz>www.gyrc.cn</gyrczywz>
+		<!-- 附件上传截取服务器路径(windows用2,linux用5) -->
+		<fjscCutOutLj>2</fjscCutOutLj>
+		<!-- 网站用户缓存文件路径和文件名 linux window配置不一样 -->
+		<wzyhhcwjlj>/gxcc/sysfiles/wzyhfile.txt</wzyhhcwjlj>
+		<!-- 简历缓存文件路径和文件名 linux window配置不一样 -->
+		<jlhcwjlj>/gxcc/sysfiles/jlFile.txt</jlhcwjlj>
+		<!-- 外网服务器地址 -->
+		<networkServer>http://192.168.130.85:8086</networkServer>
+		<!-- 【支付宝】 配置str -->
+		<!-- 服务器异步通知页面路经 -->
+		<notifyUrl>http://lsldd.oicp.io</notifyUrl>
+		<!-- 页面跳转同步通知页面路经 -->
+		<returnUrl>http://lsldd.oicp.io</returnUrl>
+		<!-- 请求关网地址 -->
+		<qqgwUrl>https://openapi.alipay.com/gateway.do</qqgwUrl>
+		<!-- 商户appid -->
+		<appId>2017081708245483</appId>
+		<!-- 党员商户appid -->
+		<dyappId>2018101661701332</dyappId>
+		<!-- alipay.dat文件路径 -->
+		<alipayUrl>C:\\Users\\Administrator\\git\\gyrlzyw\\src\\main\\webapp\\WEB-INF\\alipay.dat
+		</alipayUrl>
+		<!-- 【支付宝】 配置end -->
+		<!-- 【邮箱】 配置str -->
+		<!-- 邮箱服务 -->
+		<serverHost>smtpdm.aliyun.com</serverHost>
+		<!-- 邮箱端口号 -->
+		<serverPort>25</serverPort>
+		<!-- 邮箱账号 -->
+		<userName>cfyj@gyrc.com.cn</userName>
+		<!-- 邮箱密码 -->
+		<passWord>GYrc85280208</passWord>
+		<!-- 【邮箱】 配置ent -->
+		<!-- 【二级域名】 配置str -->
+		<!-- nginx服务器地址 -->
+		<nginxServer>10.100.100.9</nginxServer>
+		<!-- nginx服务器用户名 -->
+		<nginxName>root</nginxName>
+		<!-- nginx服务器密码 -->
+		<nginxPwd>1qaz@WSX</nginxPwd>
+		<!-- 二级域名后缀 -->
+		<ejymhz>.gyrc.cn</ejymhz>
+		<!-- 【二级域名】 配置end -->
+		<!-- 【手机发送短信配置】 配置str -->
+		<!-- 手机用户名 -->
+		<sjUser>gyrc_02</sjUser>
+		<!-- 手机密码 -->
+		<sjPwd>rFcGhI304ki07D8kit</sjPwd>
+		<!-- 【手机发送短信配置】 配置end -->
+		<!-- 关于我们联系电话 -->
+		<lxdh>lxdh</lxdh>
+		<!-- 关于我们贵阳人才介绍 -->
+		<gyrcjs>gyrcjs</gyrcjs>
+		<!-- 关于我们网址 -->
+		<wz>wz</wz>
+		<!-- 公司地址 -->
+		<gsdz>gsdz</gsdz>
+		<!-- 展位数 -->
+		<zws>zws</zws>
+		<!-- 后台添加banner数量 -->
+		<httjbannersl>httjbannersl</httjbannersl>
+		<!-- 单位购买banner数量 -->
+		<dwgmbannersl>dwgmbannersl</dwgmbannersl>
+		<!-- 图片需压缩的模块名 -->
+		<tpysmodename>gsyyzz,zzjgdm,jbrsfz,xczpcns,fwzpht</tpysmodename>
+		<!-- 图片需压缩的大小限制 -->
+		<tpysxzsize>500000</tpysxzsize>
+		<!-- 图片压缩质量 -->
+		<tpysquality>tpysquality</tpysquality>
+		<!-- 单位信誉值 -->
+		<dwxyzcs>dwxyz</dwxyzcs>
+		<!-- 系统参数表(gyrlzyw_qzzp_xtcs) end -->
+	</sx-app-Config>
+	<jfcs-app-config
+		type="com.sx.gyrlzyw.gyrcht.common.conf.JfcsAppConfig">
+		<!-- 积分参数代码配置 -->
+		<!-- 企业审核通过 -->
+		<qyshtg>qyshtg</qyshtg>
+		<!-- 未按时提交招聘会职位 -->
+		<wastjzw>wastjzw</wastjzw>
+		<!-- 信息完整度达到70% -->
+		<xxwzd7>xxwzd7</xxwzd7>
+		<!-- 信息完整度达到90% -->
+		<xxwzd9>xxwzd9</xxwzd9>
+		<!-- 信息完整度达到100% -->
+		<xxwzd10>xxwzd10</xxwzd10>
+		<!-- 签到第1日 -->
+		<lx1t>lx1t</lx1t>
+		<!-- 连续签到第2日 -->
+		<lx2t>lx2t</lx2t>
+		<!-- 连续签到第3日 -->
+		<lx3t>lx3t</lx3t>
+		<!-- 连续签到第4日 -->
+		<lx4t>lx4t</lx4t>
+		<!-- 连续签到第5日 -->
+		<lx5t>lx5t</lx5t>
+		<!-- 连续签到第6日 -->
+		<lx6t>lx6t</lx6t>
+		<!-- 连续签到第7日 -->
+		<lx7t>lx7t</lx7t>
+		<!-- 企业自主展位签到 -->
+		<qyzwzwqd>qyzwzwqd</qyzwzwqd>
+		<!-- 企业现场展位签到 -->
+		<qyxczwqd>qyxczwqd</qyxczwqd>
+		<!-- 企业现场活动签到 -->
+		<qyxchdqd>qyxchdqd</qyxchdqd>
+		<!-- 企业校园活动签到 -->
+		<qyxchdqd>qyxyhdqd</qyxchdqd>
+
+		<!-- 企业校园活动审核通过 -->
+		<qyxyhdshtg>qyxyhdshtg</qyxyhdshtg>
+		<!-- 企业现场活动审核通过 -->
+		<qyxchdshtg>qyxchdshtg</qyxchdshtg>
+		<!-- 按时提交招聘会职位 -->
+		<astjzpzw>astjzpzw</astjzpzw>
+		<!-- 招聘会扫码反馈 -->
+		<zphsmfk>zphsmfk</zphsmfk>
+		<!-- 购买非投递简历 -->
+		<gmftdjl>gmftdjl</gmftdjl>
+		<!-- 发送短信内容 -->
+		<gmfsdxnr>gmfsdxnr</gmfsdxnr>
+		<!-- 名企图标 -->
+		<gmmqtb>gmmqtb</gmmqtb>
+		<!-- banner -->
+		<gmbanner>banner</gmbanner>
+		<!-- 取消预订展位 -->
+		<qxzwyd>qxzwyd</qxzwyd>
+		<!-- 刷新职位 -->
+		<sxzw>sxzw</sxzw>
+	</jfcs-app-config>
+
+	<!-- 结束 -->
+	<!-- 失效广告删除时间 -->
+	<gggl-app-config
+		type="com.sx.gyrlzyw.gyrcht.gggl.conf.GgAppConfig">
+		<!-- 订单删除时间 -->
+		<ggscsj>15</ggscsj>
+	</gggl-app-config>
+	<!-- 系统管理删除时间 -->
+	<xtgl-app-config
+		type="com.sx.gyrlzyw.gyrcht.xtgl.conf.XtglAppConfig">
+		<!-- 短信清理时间 -->
+		<dxqlsj>00</dxqlsj>
+		<!-- 手机验证码失效删除 -->
+		<sjyzmscsj>00</sjyzmscsj>
+		<!-- 热门更新时间 -->
+		<rmgxsj>00</rmgxsj>
+	</xtgl-app-config>
+	<!-- 单位管理 -->
+	<dwgl-app-config
+		type="com.sx.gyrlzyw.dwzx.conf.DwzxAppConfig">
+		<!-- 记录失效时间 -->
+		<jlscsj>00</jlscsj>
+		<!-- 职位失效归档 -->
+		<zwgdsj>00</zwgdsj>
+		<!-- 单位失效时间 -->
+		<dwsxsj>00</dwsxsj>
+	</dwgl-app-config>
+	<!-- 个人中心 -->
+	<grjl-app-config
+		type="com.sx.gyrlzyw.grzx.conf.GrzxAppConfig">
+		<!-- 简历记录失效时间 -->
+		<jljlscsj>00</jljlscsj>
+		<!-- 投递记录失效时间 -->
+		<tdjlscsj>00</tdjlscsj>
+	</grjl-app-config>
+	<!-- 支付宝 -->
+	<zfb-app-config
+		type="com.sx.gyrlzyw.common.zfb.conf.ZfbAppConfig">
+		<!-- 订单状态修改时间 -->
+		<ddztxgsj>00</ddztxgsj>
+	</zfb-app-config>
+	<!-- 现场招聘会展位到期自动服务 -->
+	<xczwdq-app-config
+		type="com.sx.gyrlzyw.gyrcht.ywgl.conf.XczwdqAppConfig">
+		<!-- 现场招聘会展位到期时间 -->
+		<xczwdqxgsj>00</xczwdqxgsj>
+		<!-- 委托招聘展位到期时间 -->
+		<wtzwdqxgsj>00</wtzwdqxgsj>
+		<!-- 现场招聘短信提醒提交招聘简章时间 -->
+		<xczpdxtxsj>14</xczpdxtxsj>
+	</xczwdq-app-config>
+	<!-- 统计分析年度每月招聘 -->
+	<tjfx-app-config
+		type="com.sx.gyrlzyw.gyrcht.tjfx.bbtj.conf.TjfxAppConfig">
+		<!-- 统计分析年度每月招聘 初始年份 -->
+		<ndmyzpbcnf>2014</ndmyzpbcnf>
+		<!-- 统计分析年度每月招聘 月份 -->
+		<ndmyzpbcyf>01</ndmyzpbcyf>
+		<!-- 统计分析年度每月招聘 日 -->
+		<ndmyzpbcday>01</ndmyzpbcday>
+		<!-- 统计分析年度每月招聘 时间 -->
+		<ndmyzpbcsj>00</ndmyzpbcsj>
+		<!-- 离校毕业生 时间 -->
+		<lxbyszchd>00</lxbyszchd>
+		<!-- 高校毕业生 日 -->
+		<gxbysjyfwday>01</gxbysjyfwday>
+		<!-- 高校毕业生 时间 -->
+		<gxbysjyfwsj>00</gxbysjyfwsj>
+	</tjfx-app-config>
+	<!-- 投递记录申请编号重置 -->
+	<sqbh-app-config
+		type="com.sx.gyrlzyw.common.xlhcz.conf.SqbhAppConfig">
+		<!-- 投递记录申请编号重置 时间 -->
+		<sqbhczsj>00</sqbhczsj>
+	</sqbh-app-config>
+	<!-- 筑人才极光推送配置 -->
+	<jpush-config type="com.sx.gyrlzyw.common.jpush.JPushConf">
+		<mastersecret>8f58648818a055b211113b54</mastersecret>
+		<appkey>4d0fe18ca5ebabcb306ed85f</appkey>
+	</jpush-config>
+	<!-- 筑人才极光推送配置 -->
+	<jfcsqt-app-config
+		type="com.sx.gyrlzyw.dwzx.common.conf.JfcsAppConfig">
+		<!-- 积分参数代码配置 -->
+		<!-- 企业审核通过 -->
+		<qyshtg>qyshtg</qyshtg>
+		<!-- 未按时提交招聘会职位 -->
+		<wastjzw>wastjzw</wastjzw>
+		<!-- 信息完整度达到70% -->
+		<xxwzd7>xxwzd7</xxwzd7>
+		<!-- 信息完整度达到90% -->
+		<xxwzd9>xxwzd9</xxwzd9>
+		<!-- 信息完整度达到100% -->
+		<xxwzd10>xxwzd10</xxwzd10>
+		<!-- 签到第1日 -->
+		<lx1t>lx1t</lx1t>
+		<!-- 连续签到第2日 -->
+		<lx2t>lx2t</lx2t>
+		<!-- 连续签到第3日 -->
+		<lx3t>lx3t</lx3t>
+		<!-- 连续签到第4日 -->
+		<lx4t>lx4t</lx4t>
+		<!-- 连续签到第5日 -->
+		<lx5t>lx5t</lx5t>
+		<!-- 连续签到第6日 -->
+		<lx6t>lx6t</lx6t>
+		<!-- 连续签到第7日 -->
+		<lx7t>lx7t</lx7t>
+		<!-- 企业自主展位签到 -->
+		<qyzwzwqd>qyzwzwqd</qyzwzwqd>
+		<!-- 企业现场展位签到 -->
+		<qyxczwqd>qyxczwqd</qyxczwqd>
+		<!-- 查看活动投递简历 -->
+		<ckgrjl>ckgrjl</ckgrjl>
+		<!-- 按时提交招聘会职位 -->
+		<astjzpzw>astjzpzw</astjzpzw>
+		<!-- 招聘会扫码反馈 -->
+		<zphsmfk>zphsmfk</zphsmfk>
+		<!-- 购买非投递简历 -->
+		<gmftdjl>gmftdjl</gmftdjl>
+		<!-- 发送短信内容 -->
+		<gmfsdxnr>gmfsdxnr</gmfsdxnr>
+		<!-- 名企图标 -->
+		<gmmqtb>gmmqtb</gmmqtb>
+		<!-- banner -->
+		<gmbanner>banner</gmbanner>
+		<!-- 取消预订展位 -->
+		<qxzwyd>qxzw</qxzwyd>
+		<!-- 刷新职位 -->
+		<sxzw>sxzw</sxzw>
+	</jfcsqt-app-config>
+
+	<!--签到参数配置 -->
+	<qdcs-app-config
+		type="com.sx.gyrlzyw.common.signin.SignAppconfig">
+		<!-- 签到第1日 -->
+		<lx1t>1</lx1t>
+		<!-- 连续签到第2日 -->
+		<lx2t>2</lx2t>
+		<!-- 连续签到第3日 -->
+		<lx3t>3</lx3t>
+		<!-- 连续签到第4日 -->
+		<lx4t>4</lx4t>
+		<!-- 连续签到第5日 -->
+		<lx5t>5</lx5t>
+		<!-- 连续签到第6日 -->
+		<lx6t>6</lx6t>
+		<!-- 连续签到第7日 -->
+		<lx7t>7</lx7t>
+	</qdcs-app-config>
+
+	<!--发送短信参数配置 -->
+	<fsdx-config type="com.sx.gyrlzyw.common.helper.FsdxConfig">
+		<APIURL>http://sms-gw.bjedu.cloud:9888/smsservice/SendSMS</APIURL>
+		<userID>100597</userID>
+		<password>gyrc_2019</password>
+		<SenderAddr>97</SenderAddr>
+	</fsdx-config>
+
+	<!-- 请求Gateway 认证 -->
+	<gateway-config type="com.sx.gyrlzyw.interceptor.SxGateWayConfig">
+		<username>test</username>
+		<password>test</password>
+		<logurl>http://192.168.130.61:8080/services/logserver/api/logserver-kafka/publish</logurl>
+		<oauthurl>http://192.168.130.61:8080/services/uaa/oauth/token</oauthurl>
+		<sendlimits>100</sendlimits>
+	</gateway-config>
+
+    <!--httpclient配置文件-->
+    <http-client-Config type="com.sx.gyrlzyw.common.httpClient.HttpClientConfig">
+		<!--设置连接超时时间(单位毫秒)-->
+        <conTimeout>30000</conTimeout>
+        <!--置请求超时时间(单位毫秒)-->
+        <conRequestTimeout>30000</conRequestTimeout>
+        <!--socket读写超时时间(单位毫秒)-->
+        <socketTimeout>30000</socketTimeout>
+        <!--设置是否允许重定向(默认为true)-->
+        <redirectsEnabled>true</redirectsEnabled>
+		<!--外网前置机地址-->
+		<!--<wwqzj_path>http://130.10.7.145:8088</wwqzj_path>-->
+		<wwqzj_path>http://130.10.7.13:8001</wwqzj_path>
+		<!--外网前置机IP-->
+		<uriHost>130.10.7.13</uriHost>
+		<!--<uriHost>130.10.7.145</uriHost>-->
+    </http-client-Config>
+</sx-config>
+
